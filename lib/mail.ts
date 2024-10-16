@@ -22,7 +22,7 @@ export const sendPasswordResetEmail = async (
     token: string
 ) => {
     const resetLink = `${domain}/auth/new-password?token=${token}`;
-   // const resetLink = `http://localhost:3000/auth/new-password?token=${token}`;
+    // const resetLink = `http://localhost:3000/auth/new-password?token=${token}`;
 
     await resend.emails.send({
       //  from: "webmaster.fmk@fmkin.com",
@@ -35,7 +35,7 @@ export const sendPasswordResetEmail = async (
 
 export const sendVerificationEmail = async (email: string, token: string) => {
     // const confirmLink = `http://localhost:3000/auth/new-verification?token=${token}`;
-    const confirmLink = `${domain}/auth/new-verification?token=${token}`;
+     const confirmLink = `${domain}/auth/new-verification?token=${token}`;
 
     await resend.emails.send({
         //from: "webmaster.fmk@fmkin.com",
